@@ -1,0 +1,63 @@
+body {
+  font-family: Lato, sans-serif;
+}
+
+#window {
+  width: 100%;
+}
+#slide-container {
+  position: relative;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#slide-container img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/*set z-index of the first slide displayed*/
+#img-1 {
+  z-index: 1;
+}
+/*the page background can be seen before
+first slide comes into position*/
+.notFirst {
+  opacity: 0;
+}
+.moves {
+  animation: slideIn .4s;
+}
+@keyframes slideIn {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+#credits-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#credits-container span {
+  margin-top: 5px;
+  text-align: center;
+}
+#credits-container div {
+  margin-top: 5px;
+}
+#buttons-container {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+#next {
+    margin-left: 12px;
+}
